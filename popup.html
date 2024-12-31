@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>牛马的日常</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .card {
+      background: #f5f5f5;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .progress-bar {
+      width: 100%;
+      height: 20px;
+      background-color: #eee;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 5px;
+    }
+    .progress {
+      height: 100%;
+      background-color: #4CAF50;
+      transition: width 0.3s ease;
+    }
+    input {
+      width: 100%;
+      padding: 5px;
+      margin: 5px 0;
+      box-sizing: border-box;
+    }
+    .title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .progress-text {
+      text-align: right;
+      color: #666;
+      font-size: 0.9em;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>牛马的日常</h2>
+    
+    <div class="card">
+      <div class="title">当前时间</div>
+      <div id="current-time"></div>
+    </div>
+
+    <div class="card">
+      <div class="title">距离放假</div>
+      <div id="weekend-countdown"></div>
+    </div>
+
+    <div class="card">
+      <div class="title">工资计算器</div>
+      <input type="number" id="salary" placeholder="请输入月薪">
+      <div class="title">今日工作进度</div>
+      <div id="progress-text" class="progress-text">0%</div>
+      <div class="progress-bar">
+        <div id="work-progress" class="progress"></div>
+      </div>
+      <div id="earned-today"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
